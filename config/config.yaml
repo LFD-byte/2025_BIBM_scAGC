@@ -1,0 +1,18 @@
+defaults:
+  - _self_
+
+dataset:
+    dataname: Quake_Smart-seq2_Diaphragm
+    normalize: true
+    log1p: true
+    highly_variable_genes: 1500
+
+training:
+    model: scagc
+    seed: 42
+    pretrain_epochs: 1000
+    maxiter: 300
+    temperature: 0.7
+    gumbel_temperature: 0.5
+    k: 15
+    gpu_option: '0'
